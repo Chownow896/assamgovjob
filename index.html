@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assam Govt Job Apply</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Assam Govt Job 2025</h1>
+    <p><strong>Qualification:</strong> Minimum 8th Pass</p>
+    <p><strong>Interview:</strong> Not Required</p>
+    <p><strong>Joining:</strong> After 1 Month Training + Documents Verification</p>
+
+    <form id="applyForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="text" id="village" placeholder="Village/City" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <input type="text" id="qualification" placeholder="Qualification" value="8th Pass" readonly />
+      <button type="submit">Apply Now</button>
+    </form>
+
+    <p id="successMsg" class="hidden">
+      ✅ Happy April Fool !
+    </p>
+
+    <!-- Hidden image that will show only after form submission -->
+    <img src="april-fool.jpg.jpg" alt="April Fool" id="aprilImg" class="hidden april-image" />
+  </div>
+
+  <script>
+    document.getElementById('applyForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('successMsg').classList.remove('hidden');
+      document.getElementById('aprilImg').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
